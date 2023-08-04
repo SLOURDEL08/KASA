@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 .App {
   text-align: center;
 }
@@ -14,12 +17,12 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  padding:10px 50px 10px 50px;
+  background-color: #fff;
+  min-height: 10vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -36,3 +39,599 @@
     transform: rotate(360deg);
   }
 }
+
+.logo-main{
+  width:120px;
+  height: auto;
+}
+
+nav ul li{
+  display: inline;
+}
+
+.nav-links li{
+font-size:20px;
+padding:0px 10px 0px 10px;
+font-family: 'Montserrat';
+color:#FF6060;
+}
+
+.imageBelow{
+  border-radius:15px;
+  width:100%;
+  object-fit: cover;
+  object-position: 50% 52%; /* even if we dont declare this the image will still be centered */
+
+
+}
+
+.containImageBelow {
+  position: relative;
+  padding:10px 50px 10px 50px;
+}
+
+.imageContainer {
+  position: relative;
+  display: inline-block;
+  width:100%;
+  margin-top:10px
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 99%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  border-radius:15px;
+
+}
+
+.overlayText {
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;padding:0px
+
+}
+
+.overlayText h1{
+  font-weight:500;
+  font-family: 'Montserrat';
+
+
+}
+
+
+footer{
+  background-color:#000;
+  padding:40px 30px 40px 30px;
+  margin-top:30px;
+  text-align: center;
+  display: flex; /* Utilisation de flexbox */
+  justify-content: center; /* Centrer horizontalement le contenu */
+  align-items: center; /* Centrer verticalement le contenu */
+  flex-direction: column; /* Afficher les éléments en colonne */
+  gap:25px;
+  
+  }
+  
+  .imageFooter{
+    width:8%;
+    height: auto;
+  
+  
+  }
+  
+  .mentions{
+    color:white;
+  font-size:13px;
+  font-weight:300
+  }
+  
+.main-part {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #F6F6F6;
+  padding: 40px 30px;
+  border-radius: 25px;
+  margin: 20px 50px;
+  gap:3.5%;
+  
+}
+
+.items-mainpart {
+  flex-basis: 30%;
+  height: 340px;
+  background-color: #FF6060;
+  padding: 20px; 
+  box-sizing: border-box; 
+  border-radius: 7px;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  margin-bottom: 3.5%;
+}
+
+.content-mainpart {
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+  font-size: 15px;
+  color: white;
+  font-family: 'Montserrat';
+  font-weight: 300;
+  line-height: 1.5;
+  z-index: 2;
+  text-decoration: none;
+
+}
+
+
+.title-location{  
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+  font-size: 15px;
+  color: white;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  line-height: 1.5;
+  z-index: 2;
+  text-decoration: none;
+}
+
+.items-mainpart::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(#00000000, rgba(0, 0, 0, 0.5));
+  z-index: 1;
+  pointer-events: none;
+  border-radius: 7px;
+}
+
+@media screen and (max-width: 768px) {
+  /* Styles pour la version mobile */
+  .main-part {
+    display: grid;
+    grid-template-columns: 1fr; /* Un item par ligne sur mobile */
+    gap: 0;
+    padding: 0;
+    margin: 0;
+    background: #fff;
+  }
+
+  .items-mainpart {
+    flex-basis: 100%; /* Un item par ligne sur mobile */
+    margin: 20px 40px;
+    margin-bottom: 10px;
+    height: 300px;
+    background-color: #FF6060;
+    padding: 20px; /* Ajoutez un padding de 20px */
+    box-sizing: border-box; /* Inclure le padding dans la largeur et la hauteur */
+  }
+
+  .containImageBelow{
+    margin:0px;padding:15px 40px;
+  }
+
+}
+
+
+h3{
+  margin:0px;
+  padding:0px;
+}
+
+
+link{
+  text-decoration:none;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.linked-li{
+  color:#FF6060
+}
+
+
+
+.slider-container {
+width:auto;
+  margin: 5px 50px;
+  
+}
+
+.slider-item {
+  text-align: center;
+}
+
+.slider-item img {
+width:100%;
+  height: 300px;
+  border-radius: 20px;
+
+  object-fit: cover;
+}
+
+
+.slick-arrow .slick-prev button{
+ width:200px
+}
+
+.details{
+  display: flex;
+  margin:20px 50px
+}
+
+
+.right-details{
+  width: 50%;
+  text-align: right;
+}
+.left-details{
+  width: 50%;
+}
+
+.profile-pic{
+  width: 70px;
+  height: auto;
+  border-radius: 200px;
+  
+}
+
+.contain-namereview{
+  display: flex;
+  width:100%;
+justify-content: right;
+align-items: center; /* Ajout de l'alignement vertical au centre */
+}
+
+.left-details h1{
+  font-size:36px;
+  text-align: left;
+  color: #FF6060;
+  margin:0px;
+  padding:0px;
+  margin-bottom:10px;
+  font-weight: 500;
+  font-family: 'Montserrat';
+
+}
+
+.left-details h2{
+  font-size:18px;
+  text-align: left;
+  color: #FF6060;
+  margin:0px;
+  padding:0px;
+  font-family: 'Montserrat';
+  font-weight: 400;
+
+
+
+
+}
+.contain-namereview h3{
+  margin-right:10px;
+  color: #FF6060;
+text-align: right;
+font-family: 'Montserrat';
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 1.5
+;
+}
+
+
+
+.review-icons{
+margin-top:10px;
+width: 196px;}
+
+
+.contain-btnfilters{
+  text-align: left;
+}
+
+.contain-btnfilters button{
+  background-color: #FF6060;
+  padding: 5px 30px;
+  border-radius: 6px;
+  border:none;
+  box-shadow: none;
+  margin-right: 15px;
+  color: #FFF;
+text-align: center;
+font-family: Montserrat;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+margin-top:15px;
+}
+
+
+.contain-collapse-details {
+  display: flex;
+  margin:0px 50px;
+  gap:30px;
+}
+
+.collapse-container {
+  width: 100%;
+  background-color: #ff6060;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative; /* Add position relative to keep the expanding content within the container */
+  margin-bottom: 20px;
+}
+
+.contain-collapse-details-about{
+margin:0px 50px;
+width: auto;
+}
+
+.header-col {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.header-col h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.content-col {
+  text-align: left;
+  padding: 20px;
+  font-family: 'Montserrat';
+  color: #ff6060;
+  line-height: 1.8;
+  border-radius: 0px 0px 5px 5px;
+}
+.aboutpage-about{
+  width: 80%;
+  margin:20px 10%;
+  
+}
+
+
+
+.error400{
+  height: 500px;
+}
+
+.error400 h1{
+  margin-top:10px;
+  font-size:288px;
+  font-family: 'Montserrat';
+  color:#FF6060;
+  font-weight:700;
+  margin-bottom: 0px;;
+}
+
+.error400 h2{
+  margin-bottom: 50px;
+  margin-top:0px;
+  font-size:25px;
+  font-family: 'Montserrat';
+  color:#FF6060;
+  font-weight:500;
+}
+
+
+.errorLink span{
+  font-size:15px;
+  font-family: 'Montserrat';
+  color:#FF6060;
+  font-weight:500;
+  text-decoration: underline;
+}
+
+
+/* Ajoutez le style pour les icônes de navigation du slider */
+.slider-navigation-icons {
+  align-items: center;
+}
+
+.slider-prev-icon,
+.slider-next-icon {
+  position: absolute;
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+  z-index: 2;
+  padding:60px;
+}
+
+.slider-prev-icon {
+  margin-top: 70px;
+  top:100;
+  left:0;
+  margin-left: 70px;
+
+}
+
+.slider-next-icon {
+  margin-top: 180px;
+  top:0;
+  right:0;
+  margin-right: 70px;
+}
+
+.show-more-button{
+  color:#FF6060;
+  font-size:15px;
+  border:1px solid #FF6060;
+  border-radius: 100Px;
+  padding:10px 50px;
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 500;
+  cursor: pointer;
+  ;
+}
+
+
+.show-more-button:hover{
+  background-color:white;
+
+}
+
+
+@media (max-width: 768px) {
+  .slider-container img{
+    width: 100%;
+    height: 350px; /* Modifiez la hauteur selon vos besoins */
+  }
+
+
+/* Modifier les marges et rembourrages des slides */
+.slider-item {
+  margin: 0px; /* Modifiez les marges selon vos besoins */
+  padding: 0px; /* Modifiez les rembourrages selon vos besoins */
+
+}
+.App-header {
+  padding:10px 30px 10px 30px;}
+
+  .logo-main{
+    margin-top:10px;
+    width: 35%;
+  
+  }
+
+  .slider-container {
+      margin: 10px 30px;
+      
+    }
+
+    .linked-li{
+      text-transform: uppercase;
+      font-size:14px
+    }
+
+    .nav-links{
+      margin:0px;
+      padding:0px;
+      margin-top: 10px;
+
+    }
+
+    .details{
+      margin:10px 30px;
+    }
+
+    .contain-collapse-details{
+      margin:20px 30px;
+      padding:0px;
+      
+
+    }
+
+    .left-details h1{
+      font-size:22px
+    }
+
+    .collapse-container{
+      margin:15px 0px;
+      padding:0px;
+      width: 100%;
+
+    }
+
+    .details{
+      display: block;
+    }
+
+    .left-details{
+      width: 100%;
+    }
+
+    .right-details{
+      width: 100%;
+      display: flex;
+      flex-direction: row-reverse;
+      margin-top:10px
+    }
+    .review-icons{
+      margin-top:20px
+    }
+
+
+
+    .contain-collapse-details{
+display: block;   
+
+}
+
+.aboutpage-about{
+  width: auto;
+  margin:20px 30px;
+  
+}
+
+.containImageBelow{
+  padding:0px;
+  margin:0px 30px;
+}
+.containImageBelow img{
+  height:300px;
+}
+
+.error400{
+  height: fit-to-screen;
+  margin:10px 50px;
+}
+
+.error400 h1{
+  margin-top: 40px;
+  font-size:30vw;
+  margin-bottom: 50px;
+
+
+}
+
+.error400 h2{
+  margin-bottom: 50px;
+  font-size:20px;
+
+}
+
+
+.errorLink span{
+  font-size:15px;
+  font-family: 'Montserrat';
+  color:#FF6060;
+  font-weight:500;
+  text-decoration: underline;
+}
+}
+
+
+
+
+
