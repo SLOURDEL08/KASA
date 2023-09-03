@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './App.css';
+import './App.scss';
 import jsonData from './data.json';
 
 const Main = () => {
@@ -16,7 +16,11 @@ const Main = () => {
         <Link
           to={`/location/${location.id}`} // Utilisez le chemin d'URL avec l'ID de l'emplacement
           key={location.id} // Utilisez l'ID de l'emplacement comme clé
-          style={{ backgroundImage: `url(${location.cover})` }}
+          style={{
+            backgroundImage: `url(${location.cover})`,
+            backgroundPosition: 'center', // Centrer l'image
+            backgroundSize: 'cover', // Ajuster la taille de l'image pour remplir l'espace
+          }}
           className="items-mainpart"
         >
           <div className="content-mainpart">

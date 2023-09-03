@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom'; // Importer le composant Link
-import './App.css';
+import './App.scss';
 
 
 function NotFoundPage() {

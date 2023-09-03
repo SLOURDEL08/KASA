@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Collapse from './Collapse';
-import './App.css';
+import './App.scss';
 import ImageBelow from './ImageBelow.js';
 
 

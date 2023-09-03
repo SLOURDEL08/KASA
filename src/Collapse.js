@@ -8,10 +8,15 @@ const Collapse = ({ title, content, equipmentList, backgroundColor }) => {
   };
 
   return (
-    <div className="collapse-container" style={{ height: collapsed ? '45px' : 'auto' }}>
+    <div className="collapse-container" style={{ height: collapsed ? '45px' : 'fit-content' }}>
       <div className="header-col" onClick={toggleCollapse}>
         <h3>{title}</h3>
-        <div className={`icon ${collapsed ? 'collapsed' : 'expanded'}`}>&#x25BC;</div>
+        <img
+          className={`toggle-image ${collapsed ? '' : 'rotated'}`}
+          src="/toggle.png"
+          alt={collapsed ? 'collapsed' : 'expanded'}
+          style={{ transition: 'transform 0.2s ease-in-out' }}
+        />
       </div>
       {!collapsed && (
         <div className="content-col" style={{ backgroundColor }}>

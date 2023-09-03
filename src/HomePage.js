@@ -1,6 +1,6 @@
 
 import React from 'react';
-import './App.css';
+import './App.scss';
 import ImageBelow from './ImageBelow.js';
 import Main from './Main.js';
 

@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import Collapse from './Collapse';
-import './App.css';
+import './App.scss';
+import etoilerouge from './img/etoilerouge.png';
+import etoilegris from './img/etoilegris.png';
+
 
 const DetailLocation = ({ locationData }) => {
   const collapses = [
@@ -29,6 +32,19 @@ const DetailLocation = ({ locationData }) => {
     });
   };
 
+  // Function to render stars based on the rating
+  const renderStars = (rating) => {
+    const stars = [];
+    for (let i = 0; i < 5; i++) {
+      if (i < rating) {
+        stars.push(<img key={i} className="starz" src={etoilerouge} alt="filled star" />); // Étoile remplie pour les notes supérieures à 0
+      } else {
+        stars.push(<img key={i} className="starz" src={etoilegris} alt="empty star" />); // Étoile vide pour les notes égales à 0
+      }
+    }
+    return stars;
+  };
+
   return (
     <div className="detailsLocationContain">
       <div className="details">
@@ -43,10 +59,10 @@ const DetailLocation = ({ locationData }) => {
         </div>
         <div className="right-details">
           <div className="contain-namereview">
-            <h3>{locationData.host.name}</h3>
+            <h3 className="title-name">{locationData.host.name}</h3>
             <img className="profile-pic" src={locationData.host.picture} alt="profile of location" />
           </div>
-          {/* SVG and other details go here */}
+          <div className="stars-container">{renderStars(locationData.rating)}</div>
         </div>
       </div>
       <div className="contain-collapse-details">

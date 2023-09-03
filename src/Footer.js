@@ -1,13 +1,12 @@
 import React from 'react';
-import './App.css';
-import { Link } from 'react-router-dom';
+import './App.scss';
 
 
 const Footer = () => {
     return (
     <footer>
        <img width="1000px" height="200px" className="imageFooter" src="logoblanc.png" alt=""/>
-       <span class="mentions">© 2020 Kasa. All rights reserved</span>
+       <span class="mentions">© 20200 Kasa. All rights reserved</span>
     </footer>
   );
 }
