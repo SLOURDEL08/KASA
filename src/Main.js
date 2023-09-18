@@ -24,8 +24,17 @@ const Main = () => {
           className="items-mainpart"
         >
           <div className="content-mainpart">
-            <h3 className="title-location">{location.title}</h3>
-          </div>
+          <h3 className="title-location">
+  {location.title.length > 20
+    ? (
+      <>
+        {location.title.slice(0, 20)}<br />
+        {location.title.slice(20)}
+      </>
+    )
+    : location.title}
+</h3>
+         </div>
         </Link>
       ))}
       {displayCount < jsonData.length && ( // Afficher le bouton "Afficher plus" si tous les emplacements n'ont pas encore été affichés
