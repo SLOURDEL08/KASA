@@ -1,7 +1,7 @@
 import React from 'react';
-import './App.scss';
-import SliderMain from './SliderMain';
-import DetailLocation from './DetailLocation';
+import '../assets/css/App.scss';
+import SliderMain from '../components/SliderMain';
+import DetailLocation from '../components/DetailLocation';
 
 function LocationPage({ locationData }) {
   if (!locationData || !locationData.pictures || locationData.pictures.length === 0) {

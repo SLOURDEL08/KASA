@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Collapse from './Collapse';
-import './App.scss';
-import ImageBelow from './ImageBelow.js';
+import Collapse from '../components/Collapse';
+import '../assets/css/App.scss';
+import ImageBelow from '../components/ImageBelow';
 
 
 const AboutPage = () => {

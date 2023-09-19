@@ -1,8 +1,8 @@
 
 import React from 'react';
-import './App.scss';
-import ImageBelow from './ImageBelow.js';
-import Main from './Main.js';
+import '../assets/css/App.scss';
+import ImageBelow from '../components/ImageBelow';
+import Main from '../components/Main';
 
 
 

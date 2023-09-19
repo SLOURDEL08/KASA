@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.scss';
+import '../assets/css/App.scss';
 
 const ImageBelow = ({ imageUrl, showOverlayText }) => {
   return (

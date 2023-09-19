@@ -755,3 +755,12 @@ top:130px
   text-decoration: underline!important;
   text-underline-offset: 3px;
 }
+
+
+.current-slide-indicator{
+  position: absolute;
+  top:48%;
+  left:50%;
+  color:white;
+  font-family: $font-montserrat;
+}

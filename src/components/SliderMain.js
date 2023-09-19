@@ -1,17 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import previousIcon from './img/prev.png';
-import nextIcon from './img/next.png';
+import previousIcon from '../assets/img/prev.png';
+import nextIcon from '../assets/img/next.png';
 
 const SliderMain = ({ images }) => {
+  const [currentSlide, setCurrentSlide] = useState(0); // État local pour stocker le numéro de la diapositive actuelle
   const sliderRef = React.createRef();
 
   if (images.length === 1) {
-    // If there's only one image, directly render it without using the Slider component
+    // Si une seule image, affichez-la directement
     return (
       <div className="slider-container">
         <div className="slider-item">
@@ -27,6 +28,7 @@ const SliderMain = ({ images }) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    afterChange: (current) => setCurrentSlide(current), // Mettre à jour le numéro de la diapositive actuelle
   };
 
   const slides = images.map((image, index) => (
@@ -47,6 +49,9 @@ const SliderMain = ({ images }) => {
         <Slider ref={sliderRef} {...settings}>
           {slides}
         </Slider>
+        <div className="current-slide-indicator">
+        {currentSlide + 1}/{images.length} {/* Affiche le numéro de la diapositive actuelle */}
+      </div>
         <img
           className="slider-next-icon"
           src={nextIcon}

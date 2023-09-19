@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Collapse from './Collapse';
-import './App.scss';
-import etoilerouge from './img/etoilerouge.png';
-import etoilegris from './img/etoilegris.png';
+import '../assets/css/App.scss';
+import etoilerouge from '../assets/img/etoilerouge.png';
+import etoilegris from '../assets/img/etoilegris.png';
 
 
 const DetailLocation = ({ locationData }) => {
@@ -14,16 +14,14 @@ const DetailLocation = ({ locationData }) => {
     },
     {
       title: 'Équipements',
-      content: '', // You can leave this empty as we'll display the equipment list in the Collapse section
+      content: '', 
       equipmentList: locationData.equipments,
       backgroundColor: '#f6f6f6',
     },
   ];
 
-  // State to manage the collapsed state of each item
   const [collapsedStates, setCollapsedStates] = useState(collapses.map(() => true));
 
-  // Function to toggle the collapsed state for a specific item
   const handleToggle = (index) => {
     setCollapsedStates((prevState) => {
       const newState = [...prevState];
@@ -32,14 +30,13 @@ const DetailLocation = ({ locationData }) => {
     });
   };
 
-  // Function to render stars based on the rating
   const renderStars = (rating) => {
     const stars = [];
     for (let i = 0; i < 5; i++) {
       if (i < rating) {
-        stars.push(<img key={i} className="starz" src={etoilerouge} alt="filled star" />); // Étoile remplie pour les notes supérieures à 0
+        stars.push(<img key={i} className="starz" src={etoilerouge} alt="filled star" />); 
       } else {
-        stars.push(<img key={i} className="starz" src={etoilegris} alt="empty star" />); // Étoile vide pour les notes égales à 0
+        stars.push(<img key={i} className="starz" src={etoilegris} alt="empty star" />); 
       }
     }
     return stars;

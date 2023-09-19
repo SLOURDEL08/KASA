@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navigation from './Navigation';
-import HomePage from './HomePage';
-import AboutPage from './AboutPage';
-import NotFoundPage from './NotFoundPage';
-import LocationPage from './LocationPage';
+import Navigation from './components/Navigation';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import NotFoundPage from './pages/NotFoundPage';
+import LocationPage from './pages/LocationPage';
 import jsonData from './data.json';
-import Footer from './Footer'; // Assurez-vous d'importer le composant Footer
+import Footer from './components/Footer'; // Assurez-vous d'importer le composant Footer
 
 function App() {
   return (
@@ -14,35 +14,31 @@ function App() {
       <div className="App">
         <Navigation />
 
-        {/* Définition des routes */}
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/a-propos" element={<AboutPage />} />
           <Route path="/location" element={<LocationList />} />
-          {/* Utilisez l'ID de l'emplacement comme paramètre dans l'URL */}
           {jsonData.map((location) => (
             <Route
               key={location.id}
               path={`/location/${location.id}`}
-              element={<LocationPage locationData={location} />} // Passez l'objet location en tant que locationData
+              element={<LocationPage locationData={location} />} 
             />
           ))}
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
 
-        {/* Ajoutez le composant Footer ici */}
         <Footer />
       </div>
     </Router>
   );
 }
 
-// LocationList component to display the list of locations
 const LocationList = () => {
   return (
     <div>
       {jsonData.map((location) => (
-        <LocationPage key={location.id} locationData={location} /> /* Passez l'objet location en tant que locationData */
+        <LocationPage key={location.id} locationData={location} /> 
       ))}
     </div>
   );
