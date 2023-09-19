@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom'; // Importer le composant Link
+import { Link } from 'react-router-dom';
 import '../assets/css/App.scss';
 
 
